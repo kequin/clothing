@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Body  from './components/main/elements.js'
-import Header from './components/main/header/index'
+import Main_Page  from './components/main_page';
+import Header from './components/header/index.js';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import Futter from './components/futter';
+import { Context } from './context';
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme'))
@@ -36,8 +39,13 @@ const App = () => {
   }
   return ( 
     <div>
-      <Header changeTheme = {ChangeTheme} them = {theme}/>
-      <Body/>
+      <Context.Provider value = { theme }>
+        <Header changeTheme = {ChangeTheme}/>
+        <Router>
+          <Route path='/' component={Main_Page}/>
+        </Router>
+        <Futter />
+      </Context.Provider>
     </div>
   );
 }

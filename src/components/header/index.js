@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import style from './styles.module.scss';
 import classNames from 'classnames';
-import search from './../../../imgs/loupe.png';
+import search from './../../imgs/loupe.png';
 
 const Header = (props) => {
     return (
