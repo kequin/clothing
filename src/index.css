@@ -1,0 +1,32 @@
+html[data-theme='light'] {
+  --text: black;
+  --background-body: white;
+  /* HEADER */
+  --button-switch: #b9a5f5;
+  --background-Header: #845bff;
+  --background-switch: #fafafa;
+  --color-header-text: rgba(0, 0, 0, 0.767);
+  /* END HEADER */
+}
+
+html[data-theme='dark'] {
+  --text: white;
+  --background-body: #19191d;
+  /* HEADER */
+  --color-header-text: #845bff;
+  --button-switch: #845bff;
+  --background-Header: #19191d;
+  --background-switch: rgba(132, 91, 255, 0.4);
+  /* END HEADER */
+}
+html::-webkit-scrollbar {
+  width: 5px;
+}
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #ffffff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #9b9b9b;
+}
