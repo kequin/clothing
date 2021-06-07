@@ -1,33 +1,26 @@
-import React, {useState} from 'react';
-import style from './styles.module.scss';
-import classNames from 'classnames';
-import search from './../../imgs/loupe.png';
+import React from 'react';
+import main_styles from './default.module.scss';
+import { Link } from 'react-router-dom';
+import Menu from './menu';
+import Switch from './switch';
+import img from './../../imgs/loupe.png';
 
 const Header = (props) => {
     return (
-        <div className = {style.Main}>
-            <div className={style.Name}>
-                <p>
-                    Clo<span>the</span>s
-                </p>
+        <div className={main_styles.Main}>
+            <div className={main_styles.Name}>
+                <Link to = ''>Clo<span>the</span>s</Link>
             </div>
-            <div className={style.Panel}>
-                <div className={style.Switch}>
-                    <p>
-                        Theme {props.them === 'light' ? 'light' : "dark" }
-                    </p>
-                    <label className={style.switch}>
-                        <input type="checkbox" onChange={() => props.changeTheme()}></input>
-                        <span className={classNames(style.slider, style.round)}></span>
-                    </label>
-                </div>
-                <form className={style.input} onSubmit={(e) => { e.preventDefault(); }}>
-                    <input type="text" placeholder = "Write model name"></input>
-                    <button onClick = {() => console.log('sending...')}>
-                        <img src={search} alt="search"></img>
+            <div className={main_styles.Panel}>
+                <Switch theme={props.theme} changeTheme={props.changeTheme}/>
+                <form className={main_styles.input} onSubmit={(e) => { e.preventDefault(); }}>
+                    <input type="text" placeholder="Write model name"></input>
+                    <button onClick={() => console.log('sending...')}>
+                        <img src={img} alt="search"></img>
                     </button>
                 </form>
             </div>
+            <Menu />
         </div>
     );
 }
