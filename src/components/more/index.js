@@ -1,24 +1,25 @@
 import React, {useEffect, useState} from 'react';
 import style from './style.module.scss';
 import Data from './../../api.json';
+import Info from './info';
 
 const More = (props) => {
-    const [object, setObject] = useState(null);
-    const id = props.match.params.id;
+    const [returns, SetReturns] = useState(null); 
+    const id = props.match.params.id
     const res = Data.result;
     useEffect(() => {
+        props.history.push(props.match.url)
+        console.log(props.history);
         let obj = null;
         for(let i = 0; i < res.length; i++){
             if(res[i].id === Number(id)) {obj = res[i]}
         }
-        setObject(obj);
-    }, [])
+        SetReturns(<Info object={obj}/>)
+    }, [])  
 
     return (
-        <div className={style.Parent}>
-            <div className={style.imgs}>
-                <img src={object.image}/>
-            </div>
+        <div className={style.Parent}> 
+            {returns}
         </div>
     )
 }

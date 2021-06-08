@@ -8,6 +8,8 @@ const List = (props) => {
     const [block, setBlock] = useState(false);
     let matchID = props.match.params.list;
     useEffect(() => {
+        console.log(props.history);
+        props.history.push(props.match.url)
         setBlock(false);
         const res = Data.result;
         let newArr = [];
@@ -17,24 +19,15 @@ const List = (props) => {
             }
         }
         const Objects = newArr.map((items) => {
-            return <Elements 
-                    changeBlock={() => setBlock(true)}
-                    block={block} key={items.id} items={items}
-                    url={matchID}
-                    />
+            return <Elements key={items.id} items={items} url={matchID}/>
         })
         setObjects(Objects);
     }, [matchID])
-    const changeActive = () => {
-        if(block) return style.Barrier
-        if(!block) return style.notBarrier
-    }
     return (
         <div className={style.Parent}>
             <div className={style.Child}>
                 {objects}
             </div>
-            <div className={changeActive()}></div>
         </div>
     );
 }

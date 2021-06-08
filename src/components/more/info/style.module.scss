@@ -1,0 +1,39 @@
+.Parent {
+    width: 90%;
+    display: flex;
+    height: 400px;
+    .Imgs {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        width: 400px;
+        img {
+            height: 100%;
+        }
+    }
+    .Info {
+        width: auto;
+        margin-left: 40px;
+        max-width: 900px;
+        .head {
+            display: flex;
+            .discount {
+                background-color: orangered;
+                width: max-content;
+                padding: 5px 10px;
+                font-weight: 600;
+                font-size: 25px;
+                margin-left: 10px;
+                border-radius: 5px;
+                transform: rotate(10deg);
+            }
+        }
+        p {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .money {
+            margin-top: 10px;
+        }
+    }
+}
