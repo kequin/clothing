@@ -13,12 +13,6 @@ const Header = (props) => {
             </div>
             <div className={main_styles.Panel}>
                 <Switch theme={props.theme} changeTheme={props.changeTheme}/>
-                <form className={main_styles.input} onSubmit={(e) => { e.preventDefault(); }}>
-                    <input type="text" placeholder="Write model name"></input>
-                    <button onClick={() => console.log('sending...')}>
-                        <img src={img} alt="search"></img>
-                    </button>
-                </form>
             </div>
             <Menu />
         </div>

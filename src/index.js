@@ -9,6 +9,7 @@ import { Context } from './context';
 import List from './components/list';
 import More from './components/more';
 import './index.css';
+import Custom from './components/custom';
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme'))
@@ -44,8 +45,9 @@ const App = () => {
         <Router>
           <Header theme={theme} changeTheme={ChangeTheme} />
             <Route path='/' component={Main_Page} exact/>
-            <Route path='/:list' component={List} exact/>
-            <Route path='/:list/:id' component={More} exact/>
+            <Route path='/custom' component={Custom} exact/>
+            <Route path='/products/:list' component={List} exact/>
+            <Route path='/products/:list/:id' component={More} exact/>
           <Footer />
         </Router>
       </Context.Provider>

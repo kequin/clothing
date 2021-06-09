@@ -5,12 +5,10 @@ import style from './style.module.scss';
 
 const List = (props) => {
     const [objects, setObjects] = useState(null);
-    const [block, setBlock] = useState(false);
     let matchID = props.match.params.list;
     useEffect(() => {
         console.log(props.history);
         props.history.push(props.match.url)
-        setBlock(false);
         const res = Data.result;
         let newArr = [];
         for (let i = 0; i < res.length; i++) {

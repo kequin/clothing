@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom';
 
 const Element = (props) => {
     const item = props.items;
-    const img = item.image ? `url('${item.image}')` : `url('${question}')`;
     return (
-        <Link to={`/${props.url}/${item.id}`}>
+        <Link to={`/products/${props.url}/${item.id}`}>
             <div className={style.wrapper}>
-                <div className={style.imgs} style={{ backgroundImage: img }}>
+                <div className={style.imgs} style={{ backgroundImage: `url('${item.image}')` }}>
                 </div>
                 <div className={style.model}>
                     {item?.model}

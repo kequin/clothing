@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
+
+.Parent {
+    width: 100%;
+    min-height: 600px;
+    background-color: var(--background-body);
+    transition: .3s;
+    color: var(--text);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    .Children {
+        width: 90%;
+        display: flex;
+        height: 400px;
+        .Svg {
+            width: 400px;
+            height: 100%;
+            svg {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .text2 {
+            position: absolute;
+            width: 400px;
+            text-align: center;
+            height: 100%;
+            div {
+                margin-top: 100px;
+                p {
+                    font-size: 30px;
+                    font-family: 'Baloo Tammudu 2', cursive;
+                }
+            }
+        }
+        .right {
+            display: block;
+            margin-left: 40px;
+            width: 700px;
+            max-width: 1000px;
+            .Info {
+                height: min-content;
+                max-width: 600px;
+                width: auto;
+                p {
+                    margin: 20px 0;
+                    font-size: 24px;
+                }
+            }
+            .ControlPanel {
+                
+                .size {
+                    display: grid;
+                    grid-gap: 10px;
+                    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+                    button {
+                        width: 70px;
+                        background-color: rgb(128, 93, 231);
+                        padding: 5px 10px;
+                        padding-top: 8px;
+                        border: none;
+                        border-radius: 5px;
+                        color: white;
+                        transition: .3s;
+                    }
+                    button:hover {
+                        background-color: rgb(162, 143, 221);
+                    }
+                }
+                .colors {
+                    display: flex;
+                    align-items: center;
+                    margin: 20px 0;
+                    p {
+                        font-size: 30px;
+                    }
+                    input[type="color"]::-webkit-color-swatch-wrapper {
+                        padding: 0;
+                    }
+                    input {
+                        margin: 0 10px;
+                        width: 60px;
+                    }
+                }
+                .text {
+                    display: flex;
+                    align-items: center;
+                    margin: 20px 0;
+                    p {
+                        font-size: 30px;
+                    }
+                    input {
+                        margin: 0 10px;
+                        width: 200px;
+                        font-size: 20px;
+                        color: var(--text);
+                        padding-left: 5px;
+                        border: none;
+                        height: 25px;
+                        background-color: rgb(128, 93, 231);
+                        border-radius: 2px;
+                    }
+                    input:focus {
+                        outline: none;
+                    }
+                }
+                .colorText {
+                    display: flex;
+                    align-items: center;
+                    margin: 20px 0;
+                    p {
+                        font-size: 30px;
+                    }
+                    input[type="color"]::-webkit-color-swatch-wrapper {
+                        padding: 0;
+                    }
+                    input {
+                        margin: 0 10px;
+                        width: 60px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,15 +6,15 @@ const Menu = () => {
     return (
         <div className={style.body}>
             <ul>
-                <li><Link to='/CANVAS'>CANVAS</Link></li>
-                <li><Link to='/T-SHIRT'>T-SHIRT</Link></li>
-                <li><Link to='/CUT-SEW'>CUT-SEW</Link></li>
-                <li><Link to='/SUBLIMATION'>SUBLIMATION</Link></li>
-                <li><Link to='/STOCK-PRODUCT'>STOCK-PRODUCT</Link></li>
-                <li><Link to='/CUSTOM'>CUSTOM</Link></li>
-                <li><Link to='/JEWELRY'>JEWELRY</Link></li>
-                <li><Link to='/STICKER'>STICKER</Link></li>
-                <li><Link to='/DRINKWARE'>DRINKWARE</Link></li>
+                <li><Link to='/products/CANVAS'>CANVAS</Link></li>
+                <li><Link to='/products/T-SHIRT'>T-SHIRT</Link></li>
+                <li><Link to='/products/CUT-SEW'>CUT-SEW</Link></li>
+                <li><Link to='/products/SUBLIMATION'>SUBLIMATION</Link></li>
+                <li><Link to='/products/STOCK-PRODUCT'>STOCK-PRODUCT</Link></li>
+                <li><Link to='/custom'>CUSTOM</Link></li>
+                <li><Link to='/products/JEWELRY'>JEWELRY</Link></li>
+                <li><Link to='/products/STICKER'>STICKER</Link></li>
+                <li><Link to='/products/DRINKWARE'>DRINKWARE</Link></li>
             </ul>
         </div>
     )
