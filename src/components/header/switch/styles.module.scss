@@ -1,7 +1,6 @@
 .Switch {
   height: 100%;
   display: flex;
-  width: 180px;
   margin-right: 10px;
   text-align: center;
   align-items: center;
@@ -60,5 +59,15 @@
 
   .slider.round:before {
     border-radius: 50%;
+  }
+}
+@media all and (max-width:350px) {
+  .Switch {
+    margin: 0;
+    p {
+      span {
+        display: none;
+      }
+    }
   }
 }

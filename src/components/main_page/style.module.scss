@@ -28,3 +28,16 @@
         }
     }
 }
+@media all and (max-width:1000px){
+    .body {background-position: center;}
+}
+@media all and (max-width:450px){
+    .body {
+        min-height: 400px;
+    }
+    .under_body {
+        p {
+            line-height: 30px;
+        }
+    }
+}

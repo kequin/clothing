@@ -8,7 +8,7 @@ const Info = ({object}) => {
     return(
         <div className={style.Parent}>
             <div className={style.Imgs}>
-                <img src={object.image}/>
+                <img src={object.image} alt='img'/>
             </div>
             <div className={style.Info}>
                 <div className={style.head}>

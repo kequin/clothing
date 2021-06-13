@@ -10,19 +10,19 @@ import List from './components/list';
 import More from './components/more';
 import './index.css';
 import Custom from './components/custom';
+import Menu from './components/menu';
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme'))
+  const [menu, setMenu] = useState(false);
   window.onload = () => checkfirst();
   const checkfirst = () => {
     let htmlElement = document.documentElement;
     let theme = localStorage.getItem('theme');
-    console.log(theme);
     if (theme === null) { theme = 'dark'; localStorage.setItem('theme', 'dark'); }
     else localStorage.setItem('theme', theme);
     htmlElement.setAttribute('data-theme', theme);
   }
-  console.log(window.screen);
   const ChangeTheme = () => {
     let htmlElement = document.documentElement;
     let theme = localStorage.getItem('theme');
@@ -39,11 +39,13 @@ const App = () => {
     setTheme(theme);
     htmlElement.setAttribute('data-theme', theme);
   }
+  const changeMenu = () => {setMenu(()=>!menu)}
   return (
     <div>
       <Context.Provider value={theme}>
         <Router>
-          <Header theme={theme} changeTheme={ChangeTheme} />
+          <Header menu={menu} changeMenu={changeMenu} theme={theme} changeTheme={ChangeTheme} />
+          <Menu changeMenu={changeMenu} menu={menu}/>
             <Route path='/' component={Main_Page} exact/>
             <Route path='/custom' component={Custom} exact/>
             <Route path='/products/:list' component={List} exact/>

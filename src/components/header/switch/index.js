@@ -6,7 +6,7 @@ const Switch = (props) => {
     return (
         <div className={style.Switch}>
             <p>
-                Theme {props.theme === 'light' ? 'light' : "dark"}
+                Theme <span>{props.theme === 'light' ? 'light' : "dark"}</span>
             </p>
             <label className={style.switch}>
                 <input type="checkbox" onChange={() => props.changeTheme()}></input>

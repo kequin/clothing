@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import style from './style.module.scss';
-import question from './../../../imgs/question.jpg';
 import { Link } from 'react-router-dom';
 
 const Element = (props) => {

@@ -17,7 +17,7 @@ html[data-theme="light"] {
     --background-switch: #fafafa;
     --color-header-text: rgba(0, 0, 0, 0.767);
     /* END HEADER */
-  }
+  } 
    
   html[data-theme="dark"] {
     --text: white;

@@ -1,5 +1,5 @@
 .main {
-    height: 200px;
+    height: 150px;
     transition: 0.3s;
     color: var(--text);
     width: 100%;
@@ -14,7 +14,7 @@
         div:nth-child(1) {
             width: 150px;
             margin-top: 20px;
-            height: 20%;
+            height: 30px;
             font-weight: 600 !important;
             span {
                 color: #5a3ead;
@@ -22,7 +22,7 @@
         }
         .icons {
             width: 520px;
-            height: 70%;
+            height: 100px;
             margin: 0;
             display: flex;
             span:nth-child(1) {
@@ -47,6 +47,45 @@
                     svg:hover path {
                         fill: #6b4bca;
                     }
+                }
+            }
+        }
+    }
+}
+@media all and (max-width:550px){
+    .main {
+        height: 200px;
+        div {
+            div:nth-child(1){
+                margin-bottom: 30px;
+            }
+            .icons {
+                display: block;
+                width: 300px;
+                height: 90px;
+                margin: 0 auto;
+                span {
+                    margin: 0 auto;
+                }
+                span:nth-child(1){
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width:300px){
+    .main {
+        div {
+            .icons {
+                width: 260px;
+                span {
+                    p {
+                        font-size: 20px;
+                    }
+                }
+                span:nth-child(1){
+                    width: 100%;
                 }
             }
         }

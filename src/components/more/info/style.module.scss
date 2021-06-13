@@ -7,9 +7,7 @@
         display: flex;
         justify-content: center;
         width: 400px;
-        img {
-            height: 100%;
-        }
+        img {height: 100%;}
     }
     .Info {
         width: auto;
@@ -32,8 +30,63 @@
             margin-top: 10px;
             font-size: 20px;
         }
-        .money {
-            margin-top: 10px;
+        .money {margin-top: 10px;}
+    }
+}
+@media all and (max-width:1000px){
+    .Parent {
+        height: 300px;
+        margin-top: 70px;
+        .Imgs {
+            height: 300px;
+            width: 300px;
+            img {height: 100%;}
+        }
+        .Info {
+            div {h1 {font-size: 27px;}}
+            h2 {font-size: 23px;}
+            p {
+                margin: 0;
+                font-size: 18px;
+            }
+            .money {margin: 10px 0 0 0;}
+        }
+    }
+}
+@media all and (max-width:870px){
+    .Parent {
+        display: block;
+        height: 100%;
+        .Imgs {
+            margin: 0 auto;
+        }
+        .Info {
+            margin: 20px 0 0 0;
+            p {margin: 10px 0 0 0;}
+            .money {margin: 10px 0 0 0;}
+        }
+    }
+}
+@media all and (max-width:600px){
+    .Parent {
+        margin-top: 50px;
+        .Imgs {
+            height: 250px;
+            width: 250px;
+        }
+        .Info {
+            margin: 20px 0 0 0;
+        }
+    }
+}
+@media all and (max-width:450px){
+    .Parent {
+        .Imgs {margin-top: 20px;}
+        .Info {
+            div {h1{font-size: 24px;}}
+            h2 {
+                font-size: 20px;
+            }
         }
     }
 }
